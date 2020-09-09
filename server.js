@@ -5,7 +5,7 @@ const { v4: uuidv4 } = require("uuid");
 const path = require("path");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({extended: true }));//this is the middleware
 app.use(express.json());
